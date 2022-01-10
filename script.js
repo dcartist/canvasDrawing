@@ -1,14 +1,14 @@
 // console.log("hello");
 let canvas = document.querySelector("canvas");
 let context = canvas.getContext("2d");
-context.fillStyle = "red";
+context.fillStyle = "blue";
 
 context.lineWidth = 4;
 context.beginPath();
 context.rect(100, 100, 400, 400);
 
 context.heightPath();
-context.arc(300, 300, 100, 0, Math.Pi * 20);
+context.arc(300, 300, 100, 0, Math.Pi * 2);
 
 for (let i = 0; i < 5; i++) {
   for (let j = 0; j < 5; j++) {
@@ -16,7 +16,7 @@ for (let i = 0; i < 5; i++) {
     let height = 60;
     let gap = 30;
     let x = 100 + (width + gap) * i;
-    let y = 100 + (height + gap) * i;
+    let y = 100 + (height + gap) * j;
     context.heightPath();
     context.rect(x, y, width, height);
     context.stroke();
